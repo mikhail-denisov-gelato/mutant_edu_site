@@ -34,6 +34,7 @@ RUN apk --no-cache --update add       \
                     libmemcached-dev  \
                     freetype-dev      \
                     imagemagick-dev   \
+                    bash              \
         && rm -rf /tmp/*              \
         && rm -rf /var/cache/apk/*
 # END Core Software's Installation  -------------
