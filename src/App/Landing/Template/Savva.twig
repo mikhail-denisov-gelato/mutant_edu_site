@@ -1,14 +1,241 @@
 {% extends _layout %}
 
 {% block content %}
-<div class="ui main text container">
-    <h1 class="ui header">Мои данные)</h1>
-      <ul class="right1">
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/Style.css">
+</head>
+	<script src="jquery-3.3.1.min.js"></script>
+	<script>
+
+		$(function(){
+			$('a[href^="#"]').click(function(){
+				var target = $(this).attr('href');
+				$('html, body').animate({scrollTop: $(target).offset().top}, 800);
+					return false; 
+			}); 
+		});
+
+		$(function(){
+			$('#callback').click(function(){
+				$('#pop-up-container').css('display', 'flex');
+			});
+			$('#pop-up-container').click(function(e){
+				if(e.target === this) {
+					$('#pop-up-container').css('display', 'none');
+				}
+			});
+		});
+
+		$(function(){
+			$('#callback_2').click(function(){
+				$('#pop-up-container').css('display', 'flex');
+			});
+			$('#pop-up-container').click(function(e){
+				if(e.target === this) {
+					$('#pop-up-container').css('display', 'none');
+				}
+			});
+		});	
+
+
+		$(function(){
+			$('#zakaz').click(function(){
+				$('#pop-up-container').css('display', 'flex');
+			});
+			$('#pop-up-container').click(function(e){
+				if(e.target === this) {
+					$('#pop-up-container').css('display', 'none');
+				}
+			});
+		});
+
+		$(function(){
+			$('#footer_callback').click(function(){
+				$('#pop-up-container').css('display', 'flex');
+			});
+			$('#pop-up-container').click(function(e){
+				if(e.target === this) {
+					$('#pop-up-container').css('display', 'none');
+				}
+			});
+		});
+
+	</script>
+	<title>Сыркашев Савва - официальный сайт</title>
+
+	<style>
+	.top {
+		display: block;
+		position: fixed;
+		left: 0;
+		top: 0;
+		z-index: 5;
+		background-color: #ff823a;
+		opacity: 0.3;
+		text-decoration: none;
+		padding: 10px 15px;
+		color: white;
+		border-radius: 0px 10px 10px 0px;
+		transition: all 0.2s;
+		font-size: 25px;
+	}
+
+	.top:hover {
+		padding: 10px 30px;
+		background-color: #ff5d00;
+		transition: all 0.2s;
+		opacity: 1;
+	}
+
+	@media all and (max-width: 1215px) {
+		.top {
+			padding: 10px 20px;
+		}
+	}
+
+	@media all and (max-width: 1215px) {
+		.top:hover {
+			padding: 20px 30px;
+		}
+	}
+	</style>
+</head>
+
+<body>
+
+	<div id="pop-up-container">
+		<div id="pop-up">
+			<h1>Форма заявки</h1>
+			<form action="send.php" method="POST">
+				<input id="login" type="text" name="name" autocomplete="off" placeholder="Имя" required autofocus>
+				<input type="text" name="telefon" placeholder="Телефон, без+" required pattern="[0-9]{11}"> <!-- 11 цифр-->
+				<input id="zakazat_proekt" type="submit" name="zakazat_proekt" required value="Заказать проект">
+				<br>
+				<input id="zakazat_proekt" type="checkbox" name="agreement" required value="Я согласен с условиями обработки персональных данных" >
+				<p id="agreement">Я согласен с условиями обработки персональных данных</p> 
+			</form>
+		</div>
+	</div>
+
+	<div id="header">
+
+		<div class="block">
+			<a class="top" href="#top">Вверх</a>
+			<ul class="left_nav"> <!--левое навигационное меню-->
+				<li><a class="nav" href="#tools">Услуги</a></li>
+				<li><a class="nav" href="#examples">Портфолио</a></li>
+				<li><a class="nav" href="#price">Стоимость</a></li>
+				<li style="opacity: 0.4;"><a class="nav" href="list.php">Список моих заказов</a></li> <!--типа скрытая кнопкка-->
+			</ul>
+
+			<ul class="info"> <!--правое навигационное меню-->
+				<a id="tel_number" href="tel:+79057661645">+7 (905) 766-16-45</a>
+				<a id="callback">Заказать звонок</a>
+			</ul>
+		</div>
+
+		<div class="intro"> <!--блок с информацией обо мне-->
+			<h1>Сыркашев Савва</h1>
+			<h3>Frontend-разработчик и веб-верстальщик</h3>
+			<a href="#"class="look_more" style="margin: 0 0;">Узнать больше</a>
+		</div>
+
+	</div>
+
+		<div class="what_can_i_do">
+			<h1>Что я делаю</h1>
+
+			<ul class="tools" id="tools">
+
+				<li>
+					<img src="/images/lending.png" class ="tools">
+					<p>Верстка лендинг-страниц и сайтов любой сложности</p>
+				</li>
+
+				<li>
+					<img src="/images/adaptive.png" class ="tools">
+					<p>Адаптивная верстка под все браузеры и устройства</p>
+				</li>
+
+				<li>
+					<img src="/images/front.png" class ="tools">
+					<p>Frontend-разработка и программирование</p>
+				</li>
+
+				<li>
+					<img src="/images/fix.png" class ="tools">
+					<p>Исправление и доработка существующей верстки</p>
+				</li>
+
+			</ul>
+
+			<a href="#" class="look_more">Узнать стоимоcть</a>
+		</div>
+
+		<div class="examples"> <!-- Блок, где показаны примеры моих работ -->
+			<h1>Примеры моих работ</h1>
+
+			<ul class="pictures" id="examples">
+
+				<li>
+					<img class ="pictures" src="/images/Portfolio_1.png">
+					<a href="#top">Сайт психолога Веры Антоновой</a>
+				</li>
+
+				<li>
+					<img class ="pictures" src="/images/Portfolio_2.png">
+					<a href="#top">Сайт магазина детской одежды</a>
+				</li>
+
+				<li>
+					<img class ="pictures" src="/images/Portfolio_3.png">
+					<a href="#top">Сайт магазина «Рыболов»</a>
+				</li>
+
+			</ul>
+
+			<a id="callback_2" class="look_more">Заказать звонок</a>
+		</div>
+			
+		<div class="banner" id="price"> <!-- Блок с моими условиями выпонения заказа-->
+			<p id="reklama">Адаптивная верстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</p>
+			<p id="snoska">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в зависимости от сложности задач.</p>
+		</div>
+
+		<div class="footer"> <!-- Сам футер -->
+
+			<ul class="navigation"> <!-- Левое меню навигации в футере -->
+				<li><a class="footer_nav" href="#tools">Услуги</a></li>
+				<li><a class="footer_nav" href="#examples">Портфолио</a></li>
+				<li><a class="footer_nav" href="#price">Стоимость</a></li>
+			</ul>
+
+			<ul class="feedback"> <!-- Блок обратной связи со мной, посередине футера -->
+				<li><a href="tel:+79057661645" class="footer_tel_num" class="phone icon">+7 (923) 638-26-25</a></li>
+				<li><a class="footer_email" href="#"><img src="/images/envelope.png">savvaak47@mail.ru</a></li>
+			</ul>
+
+			<ul class="right"> <!-- Правое меню, в нем лежит еще одна кнопка звонка и ссылки на мои соц. сети -->
+
+				<a id="footer_callback">Заказать звонок</a>
+
+				<ul class="right1"> <!-- Создал список соц. сетей -->
 					<li id="vk"><a href="https://vk.com/ssyrkashev"><img src="/images/vk.png" class="footer_pic"></a></li>
 					<li id="facebook"><a href=""><img src="/images/facebook-logo.png" class="footer_pic"></a></li>
 					<li id="twitter"><a href=""><img src="/images/twitter-logo-silhouette.png" class="footer_pic"></a></li>
 					<li id="instagram"><a href=""><img src="/images/instagram-social-network-logo-of-photo-camera.png" class="footer_pic"></a></li>
-                                        <li id="instagram"><a href="https://telegramm.online/#/im"><img src="/images/telegram.png" class="footer_pic"></a></li>
-      </ul>
-  </div>
+				</ul>
+
+			</ul>
+
+		</div>
+		</div>
+
+
+</body>
+</html>
 {% endblock %}

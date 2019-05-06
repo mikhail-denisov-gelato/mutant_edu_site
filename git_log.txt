@@ -1,0 +1,44 @@
+commit c0342b9d7cea3308c75751f9256483cdc1b1ace2
+Author: Saitamchik <Savvaak47@mail.ru>
+Date:   Fri Apr 26 20:27:56 2019 +0700
+
+    first commit
+
+commit 1e45a7953f4cdb53a0ebe64b674dfcea7f1b7909
+Author: Denisov Mikhail <manwebdev@gmail.com>
+Date:   Fri Nov 23 17:31:31 2018 +0300
+
+    Update docker-compose.yml
+
+commit c61957a64dcc47c7f9cf24c54495947eb5151c10
+Merge: 9ef4f94 9608afa
+Author: Denisov Mikhail <manwebdev@gmail.com>
+Date:   Sun Nov 18 20:50:27 2018 +0300
+
+    Merge pull request #1 from dlussky/master
+    
+    Docker integration
+
+commit 9608afa2d8c859ba35ae10d5f198e8cda46a34e5
+Author: Kirill Dlussky <kirill@dlussky.ru>
+Date:   Tue Oct 9 20:04:49 2018 +0300
+
+    Docker integration
+
+commit 9ef4f9458c99d496e5d2d730ba33ec42474072c6
+Author: Denisov Mikhail <manwebdev@gmail.com>
+Date:   Mon Sep 24 13:42:06 2018 +0300
+
+    - fix mockup and add link to contacts page
+
+commit d0902824b531a22fff2bb78ac4b3019e384c49f1
+Author: Denisov Mikhail <manwebdev@gmail.com>
+Date:   Mon Sep 24 13:35:30 2018 +0300
+
+    - example verse page-based site
+
+commit be50ac2d776b4ca0585348b9240c41835ab40862
+Author: Denisov Mikhail <manwebdev@gmail.com>
+Date:   Tue Sep 4 00:15:59 2018 +0300
+
+    Initial commit
