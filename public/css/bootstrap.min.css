@@ -1,0 +1,43 @@
+.row {
+	box-sizing: border-box;
+    padding: 2rem 0;
+    margin: 0 auto;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.small-copy {
+    font-size: 12px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px)
+.col-md-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col img, .col-1 img, .col-10 img, .col-11 img, .col-12 img, .col-2 img, .col-3 img, .col-4 img, .col-5 img, .col-6 img, .col-7 img, .col-8 img, .col-9 img, .col-auto img, .col-lg img, .col-lg-1 img, .col-lg-10 img, .col-lg-11 img, .col-lg-12 img, .col-lg-2 img, .col-lg-3 img, .col-lg-4 img, .col-lg-5 img, .col-lg-6 img, .col-lg-7 img, .col-lg-8 img, .col-lg-9 img, .col-lg-auto img, .col-md img, .col-md-1 img, .col-md-10 img, .col-md-11 img, .col-md-12 img, .col-md-2 img, .col-md-3 img, .col-md-4 img, .col-md-5 img, .col-md-6 img, .col-md-7 img, .col-md-8 img, .col-md-9 img, .col-md-auto img, .col-sm img, .col-sm-1 img, .col-sm-10 img, .col-sm-11 img, .col-sm-12 img, .col-sm-2 img, .col-sm-3 img, .col-sm-4 img, .col-sm-5 img, .col-sm-6 img, .col-sm-7 img, .col-sm-8 img, .col-sm-9 img, .col-sm-auto img, .col-xl img, .col-xl-1 img, .col-xl-10 img, .col-xl-11 img, .col-xl-12 img, .col-xl-2 img, .col-xl-3 img, .col-xl-4 img, .col-xl-5 img, .col-xl-6 img, .col-xl-7 img, .col-xl-8 img, .col-xl-9 img, .col-xl-auto img {
+    max-width: 100%;
+}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
+    position: relative;
+    padding-right: 15px;
+    padding-left: 25px;
+}

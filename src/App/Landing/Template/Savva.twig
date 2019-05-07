@@ -7,6 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="../css/Style.css">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>
 	<script src="jquery-3.3.1.min.js"></script>
 	<script>
@@ -123,116 +124,48 @@
 
 	<div id="header">
 
-		<div class="block">
-			<a class="top" href="#top">Вверх</a>
-			<ul class="left_nav"> <!--левое навигационное меню-->
-				<li><a class="nav" href="#tools">Услуги</a></li>
-				<li><a class="nav" href="#examples">Портфолио</a></li>
-				<li><a class="nav" href="#price">Стоимость</a></li>
-				<li style="opacity: 0.4;"><a class="nav" href="list.php">Список моих заказов</a></li> <!--типа скрытая кнопкка-->
-			</ul>
-
-			<ul class="info"> <!--правое навигационное меню-->
-				<a id="tel_number" href="tel:+79057661645">+7 (905) 766-16-45</a>
-				<a id="callback">Заказать звонок</a>
-			</ul>
-		</div>
 
 		<div class="intro"> <!--блок с информацией обо мне-->
-			<h1>Сыркашев Савва</h1>
-			<h3>Frontend-разработчик и веб-верстальщик</h3>
-			<a href="#"class="look_more" style="margin: 0 0;">Узнать больше</a>
+			<h1>Команда разработчиков</h1>
+			<h3>В нашей команде пока только два человека, но надеюсь мы будем расти.)</h3>
 		</div>
 
 	</div>
 
 		<div class="what_can_i_do">
-			<h1>Что я делаю</h1>
+			<h1>Перечень сотрудников</h1>
 
-			<ul class="tools" id="tools">
+			<div class="row justify-content- text-">
 
-				<li>
-					<img src="/images/lending.png" class ="tools">
-					<p>Верстка лендинг-страниц и сайтов любой сложности</p>
-				</li>
-
-				<li>
-					<img src="/images/adaptive.png" class ="tools">
-					<p>Адаптивная верстка под все браузеры и устройства</p>
-				</li>
-
-				<li>
-					<img src="/images/front.png" class ="tools">
-					<p>Frontend-разработка и программирование</p>
-				</li>
-
-				<li>
-					<img src="/images/fix.png" class ="tools">
-					<p>Исправление и доработка существующей верстки</p>
-				</li>
-
-			</ul>
-
-			<a href="#" class="look_more">Узнать стоимоcть</a>
-		</div>
-
-		<div class="examples"> <!-- Блок, где показаны примеры моих работ -->
-			<h1>Примеры моих работ</h1>
-
-			<ul class="pictures" id="examples">
-
-				<li>
-					<img class ="pictures" src="/images/Portfolio_1.png">
-					<a href="#top">Сайт психолога Веры Антоновой</a>
-				</li>
-
-				<li>
-					<img class ="pictures" src="/images/Portfolio_2.png">
-					<a href="#top">Сайт магазина детской одежды</a>
-				</li>
-
-				<li>
-					<img class ="pictures" src="/images/Portfolio_3.png">
-					<a href="#top">Сайт магазина «Рыболов»</a>
-				</li>
-
-			</ul>
-
-			<a id="callback_2" class="look_more">Заказать звонок</a>
-		</div>
-			
-		<div class="banner" id="price"> <!-- Блок с моими условиями выпонения заказа-->
-			<p id="reklama">Адаптивная верстка под все устройства и браузеры от 1000 рублей всего за 4 часа.*</p>
-			<p id="snoska">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально, в зависимости от сложности задач.</p>
-		</div>
-
-		<div class="footer"> <!-- Сам футер -->
-
-			<ul class="navigation"> <!-- Левое меню навигации в футере -->
-				<li><a class="footer_nav" href="#tools">Услуги</a></li>
-				<li><a class="footer_nav" href="#examples">Портфолио</a></li>
-				<li><a class="footer_nav" href="#price">Стоимость</a></li>
-			</ul>
-
-			<ul class="feedback"> <!-- Блок обратной связи со мной, посередине футера -->
-				<li><a href="tel:+79057661645" class="footer_tel_num" class="phone icon">+7 (923) 638-26-25</a></li>
-				<li><a class="footer_email" href="#"><img src="/images/envelope.png">savvaak47@mail.ru</a></li>
-			</ul>
-
-			<ul class="right"> <!-- Правое меню, в нем лежит еще одна кнопка звонка и ссылки на мои соц. сети -->
-
-				<a id="footer_callback">Заказать звонок</a>
-
-				<ul class="right1"> <!-- Создал список соц. сетей -->
-					<li id="vk"><a href="https://vk.com/ssyrkashev"><img src="/images/vk.png" class="footer_pic"></a></li>
+				<div class="col-3 col-md-3">
+                 <img src="/images/photo_2019-05-07_20-47-51.jpg">
+                  <ul class="right1"> <!-- Создал список соц. сетей -->
+					<li id="vk"><a href="https://vk.com/vetermanve"><img src="/images/vk.png" class="footer_pic"></a></li>
 					<li id="facebook"><a href=""><img src="/images/facebook-logo.png" class="footer_pic"></a></li>
 					<li id="twitter"><a href=""><img src="/images/twitter-logo-silhouette.png" class="footer_pic"></a></li>
 					<li id="instagram"><a href=""><img src="/images/instagram-social-network-logo-of-photo-camera.png" class="footer_pic"></a></li>
 				</ul>
+				</div>
+               <div class="col-9 col-md-3">
+                 <h3>Денисов Миша</h3>
+                 <p>Основатель</p>
+               </div>
+               <div class="col-3 col-md-3">
+                 <img src="/images/4X8io7GVs-E.jpg">
+                   <ul class="right1"> <!-- Создал список соц. сетей -->
+					<li id="vk"><a href="https://vk.com/ssyrkashev"><img src="/images/vk.png" class="footer_pic"></a></li>
+					<li id="facebook"><a href=""><img src="/images/facebook-logo.png" class="footer_pic"></a></li>
+					<li id="twitter"><a href=""><img src="/images/twitter-logo-silhouette.png" class="footer_pic"></a></li>
+					<li id="instagram"><a href="https://www.instagram.com"><img src="/images/instagram-social-network-logo-of-photo-camera.png" class="footer_pic"></a></li>
+				</ul>
+               </div>
+               <div class="col-9 col-md-3">
+                 <h3>Сыркашев Савва</h3>
+                 <p>Ученик</p>
+               </div>
+               <div class="col-3 col-md-3">
+               </div>
 
-			</ul>
-
-		</div>
 		</div>
 
 
