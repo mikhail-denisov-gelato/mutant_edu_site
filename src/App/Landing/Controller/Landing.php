@@ -27,10 +27,10 @@ class Landing extends SimpleController
             'title' => 'Main Page',
         ]);
     }
-    public function Savva () 
+    public function team () 
     {
         return $this->_render(__FUNCTION__, [
-            'title' => 'Savva',
+            'title' => 'team',
         ]);
     }
     public function contacts () 
