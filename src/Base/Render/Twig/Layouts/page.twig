@@ -23,6 +23,64 @@
   <link rel="stylesheet" type="text/css" href="../css/segment.css">
   <link rel="stylesheet" type="text/css" href="../css/dropdown.css">
   <link rel="stylesheet" type="text/css" href="../css/icon.css">
+  <script src="jquery-3.3.1.min.js"></script>
+
+   <script>
+
+    $(function(){
+      $('a[href^="#"]').click(function(){
+        var target = $(this).attr('href');
+        $('html, body').animate({scrollTop: $(target).offset().top}, 800);
+          return false; 
+      }); 
+    });
+
+    $(function(){
+      $('#callback').click(function(){
+        $('#pop-up-container').css('display', 'flex');
+      });
+      $('#pop-up-container').click(function(e){
+        if(e.target === this) {
+          $('#pop-up-container').css('display', 'none');
+        }
+      });
+    });
+
+    $(function(){
+      $('#callback_2').click(function(){
+        $('#pop-up-container').css('display', 'flex');
+      });
+      $('#pop-up-container').click(function(e){
+        if(e.target === this) {
+          $('#pop-up-container').css('display', 'none');
+        }
+      });
+    }); 
+
+
+    $(function(){
+      $('#zakaz').click(function(){
+        $('#pop-up-container').css('display', 'flex');
+      });
+      $('#pop-up-container').click(function(e){
+        if(e.target === this) {
+          $('#pop-up-container').css('display', 'none');
+        }
+      });
+    });
+
+    $(function(){
+      $('#footer_callback').click(function(){
+        $('#pop-up-container').css('display', 'flex');
+      });
+      $('#pop-up-container').click(function(e){
+        if(e.target === this) {
+          $('#pop-up-container').css('display', 'none');
+        }
+      });
+    });
+
+  </script>
 
   <style type="text/css">
   body {
@@ -48,12 +106,14 @@
 
   <div class="ui fixed inverted menu">
     <div class="ui container">
-      <a href="#" class="header item">
+      <a id="callback" class="header item">
         <img class="logo" src="/images/logo.png">
-        Project Name
+        Ваш профиль
       </a>
-      <a href="http://mudu.vetermanve.com/landing" class="item">Главная</a>
+      <a href="http://mudu.vetermanve.com/landing/index" class="item">Главная</a>
       <a href="http://mudu.vetermanve.com/landing/team" class="item">Наша команда</a>
+      <a href="http://mudu.vetermanve.com/landing/contacts" class="item">Подробности об обучении</a>
+      <a id="callback" class="item">Вход</a>
     </div>
   </div>
     {% block content %}
