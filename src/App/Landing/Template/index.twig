@@ -2,7 +2,9 @@
 
 {% block content %}
 <div class="ui main text container">
+   {% for header, content in ma %}
     <h1 class="ui header">{{ header }}</h1>
       <p>{{ content }}</br></p>
+      {% endfor %}
   </div>
 {% endblock %}
