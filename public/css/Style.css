@@ -79,6 +79,7 @@ input {
 	justify-content: center;
 	background-image: linear-gradient(to top, #1d1d1d07 , white);
 	background-color: #1d1d1d20;
+	right:0;
 }
 
 .block {
@@ -165,18 +166,35 @@ a.nav:hover {
 	flex-flow: column wrap;
 	align-items: flex-start;
 	justify-content: center;
-	background-image: url('img/pewdewpie.png');
+	background-image: url('/images/Code-team.png');
 	background-size: 50%;
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	padding: 20% 10%;
 }
 
+.intro2 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð±Ð»Ð¾ÐºÐ° Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÐµÐ¹ Ð¾Ð±Ð¾ Ð¼Ð½Ðµ*/
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
+	background-size: 40%;
+	background-repeat: no-repeat;
+    background-position: bottom left;
+	padding: 14% 10%;
+}
 .intro h1 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð¸Ð¼ÐµÐ½Ð¸ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸*/
 	margin-bottom: -10px;
 	margin-top: 0px;
 	font-size: 45px;
 
+}
+
+.text {
+    position:absolute;
+    right:0;
+    margin-right: 5%;
 }
 
 .intro h3 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð¿Ñ€Ð¾Ñ„ÐµÑÑÐ¸Ð¸*/
