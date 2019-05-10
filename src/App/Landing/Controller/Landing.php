@@ -33,13 +33,11 @@ class Landing extends SimpleController
             $content =  json_decode($content, true);
             $id = 1;
 
-    foreach($content as $header => $value) {
         return $this->_render(__FUNCTION__, [
             'ma' => $content ,
             'header' => $header ,
             'content' => $value ,
         ]);
-      };
     }
 
     public function team () 
