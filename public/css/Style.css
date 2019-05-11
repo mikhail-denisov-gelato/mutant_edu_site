@@ -16,21 +16,58 @@ html, body {
 
 @media all and (max-width: 1215px) {
      .intro {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
+	background-position: center bottom;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	padding: 14% 10%;
+	height: 600px;
+	}
+}
+
+@media (min-width: 1215px) {
+.intro3 {
     display: flex;
     flex-flow: column wrap;
     align-items: flex-start;
     justify-content: center;
-    background-image: url(/images/Code-team.png);
-    background-size: 35%;
+    background-image: url(/images/40-402407_software-development-company-surat-india-computer-programming.png);
+    background-size: 50%;
     background-repeat: no-repeat;
-    background-position: center bottom;
+    background-position: bottom right;
     padding: 20% 10%;
-    height: 600px;
+    }
+}
+
+@media all and (max-width: 1215px) {
+     .intro3 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/40-402407_software-development-company-surat-india-computer-programming.png');
+	background-position: center bottom;
+	background-size: 40%;
+	background-repeat: no-repeat;
+	padding: 14% 10%;
+	height: 600px;
 	}
 }
 
 @media all and (max-width: 1215px) {
   .text2 {
+    top: 1250px;
+    left: 200px;
+    position: absolute;
+    }
+}
+
+@media all and (max-width: 1215px) {
+  .text3 {
     top: 650px;
     left: 200px;
     position: absolute;
