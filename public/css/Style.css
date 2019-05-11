@@ -14,6 +14,52 @@ html, body {
 	}
 }
 
+@media all and (max-width: 1215px) {
+     .intro {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    justify-content: center;
+    background-image: url(/images/Code-team.png);
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    padding: 20% 10%;
+    height: 600px;
+	}
+}
+
+@media all and (max-width: 1215px) {
+  .text2 {
+    top: 650px;
+    left: 200px;
+    position: absolute;
+    }
+}
+
+@media all and (max-width: 1215px) {
+  .text {
+    top: 70px;
+    left: 200px;
+    position: absolute;
+    }
+}
+
+@media all and (max-width: 1215px) {
+  .intro2 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
+	background-position: center bottom;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	padding: 14% 10%;
+	height: 600px;
+    }
+}
+
 #pop-up-container {
 	position: absolute;
 	top: 0%;
@@ -161,7 +207,8 @@ a.nav:hover {
 	cursor: pointer;
 }
 
-.intro { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð±Ð»Ð¾ÐºÐ° Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÐµÐ¹ Ð¾Ð±Ð¾ Ð¼Ð½Ðµ*/
+@media all and (min-width: 1215px) {
+     .intro {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: flex-start;
@@ -171,9 +218,10 @@ a.nav:hover {
 	background-repeat: no-repeat;
 	background-position: bottom right;
 	padding: 20% 10%;
+    }
 }
-
-.intro2 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð±Ð»Ð¾ÐºÐ° Ñ Ð¸Ð½Ñ„Ð¾Ñ€Ð¼Ð°Ñ†Ð¸ÐµÐ¹ Ð¾Ð±Ð¾ Ð¼Ð½Ðµ*/
+@media all and (min-width: 1215px) {
+  .intro2 {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: flex-start;
@@ -183,6 +231,8 @@ a.nav:hover {
 	background-repeat: no-repeat;
     background-position: bottom left;
 	padding: 14% 10%;
+	height: 600px;
+    }
 }
 .intro h1 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð¸Ð¼ÐµÐ½Ð¸ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸*/
 	margin-bottom: -10px;
