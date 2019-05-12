@@ -20,27 +20,13 @@ html, body {
 	flex-flow: column wrap;
 	align-items: flex-start;
 	justify-content: center;
-	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
+	background-image: url('/images/Code-team.png');
 	background-position: center bottom;
 	background-size: 50%;
 	background-repeat: no-repeat;
 	padding: 14% 10%;
 	height: 600px;
 	}
-}
-
-@media (min-width: 1215px) {
-.intro3 {
-    display: flex;
-    flex-flow: column wrap;
-    align-items: flex-start;
-    justify-content: center;
-    background-image: url(/images/40-402407_software-development-company-surat-india-computer-programming.png);
-    background-size: 50%;
-    background-repeat: no-repeat;
-    background-position: bottom right;
-    padding: 20% 10%;
-    }
 }
 
 @media all and (max-width: 1215px) {
@@ -59,8 +45,39 @@ html, body {
 }
 
 @media all and (max-width: 1215px) {
+  .intro2 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
+	background-position: center bottom;
+	background-size: 50%;
+	background-repeat: no-repeat;
+	padding: 14% 10%;
+	height: 600px;
+    }
+}
+
+
+@media all and (max-width: 1215px) {
+  .intro4 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/znak1.png');
+	background-position: center bottom;
+	background-size: 35%;
+	background-repeat: no-repeat;
+	padding: 14% 10%;
+	height: 600px;
+    }
+}
+
+@media all and (max-width: 1215px) {
   .text2 {
-    top: 1250px;
+    top: 1850px;
     left: 200px;
     position: absolute;
     }
@@ -81,17 +98,69 @@ html, body {
     position: absolute;
     }
 }
-
 @media all and (max-width: 1215px) {
+  .text4 {
+    top: 1250px;
+    left: 200px;
+    position: absolute;
+    }
+}
+
+@media all and (min-width: 1215px) {
+  .intro {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/Code-team.png');
+	background-size: 50%;
+	background-repeat: no-repeat;
+	background-position: bottom right;
+	padding: 20% 10%;
+	height: 600px;
+    }
+}
+
+@media all and (min-width: 1215px) {
   .intro2 {
 	display: flex;
 	flex-flow: column wrap;
 	align-items: flex-start;
 	justify-content: center;
 	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
-	background-position: center bottom;
-	background-size: 50%;
+	background-size: 37%;
 	background-repeat: no-repeat;
+    background-position: bottom left;
+	padding: 14% 10%;
+	height: 600px;
+    }
+}
+
+@media all and (min-width: 1215px) {
+  .intro4 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/znak1.png');
+	background-size: 35%;
+	background-repeat: no-repeat;
+    background-position: bottom left;
+	padding: 14% 10%;
+	height: 600px;
+    }
+}
+
+@media all and (min-width: 1215px) {
+  .intro3 {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: flex-start;
+	justify-content: center;
+	background-image: url('/images/40-402407_software-development-company-surat-india-computer-programming.png');
+	background-size: 40%;
+	background-repeat: no-repeat;
+    background-position: bottom right;
 	padding: 14% 10%;
 	height: 600px;
     }
@@ -176,6 +245,7 @@ input {
 i.icon.phone:before{
 content:"\f095";
 }
+
 @media all and (max-width: 1215px){
 	.block {
 		display: flex;
@@ -215,62 +285,6 @@ a.nav:hover {
 	padding: 0px;
 }
 
-#tel_number { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð½Ð¾Ð¼ÐµÑ€Ð° Ñ‚ÐµÐ»ÐµÑ„Ð¾Ð½Ð°*/
-	display: block;
-	color: black;
-	font-size: 21px;
-	font-family: 'Arial', cursive;
-	font-weight: bold;
-	text-decoration: none;
-	margin-right: 20px;
-	transition: all 0.7s;
-}
-
-#callback { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ð·Ð°ÐºÐ°Ð·Ñ‚ÑŒ Ð·Ð²Ð¾Ð½Ð¾Ðº*/
-	display: block;
-	text-align: center;
-	border: 2px solid black;
-	color: #000000;
-	font-size: 19px;
-	padding: 5px 30px;
-	transition: all 0.5s;
-	background-color: white;
-}
-
-#callback:hover { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ñ…Ð¾Ð²ÐµÑ€Ð° ÐºÐ½Ð¾Ð¿ÐºÐ¸ Ð·Ð°ÐºÐ°Ð·Ñ‚ÑŒ Ð·Ð²Ð¾Ð½Ð¾Ðº*/
-	transition: all 0.5s;
-	color: white;
-	background-color: #FF573D;
-	cursor: pointer;
-}
-
-@media all and (min-width: 1215px) {
-     .intro {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: flex-start;
-	justify-content: center;
-	background-image: url('/images/Code-team.png');
-	background-size: 50%;
-	background-repeat: no-repeat;
-	background-position: bottom right;
-	padding: 20% 10%;
-    }
-}
-@media all and (min-width: 1215px) {
-  .intro2 {
-	display: flex;
-	flex-flow: column wrap;
-	align-items: flex-start;
-	justify-content: center;
-	background-image: url('/images/project-oriented-studying-web-39776590f1f562a051db046ea084a8f1906eab53b692b7c9feb1ff8bf03021bd.png');
-	background-size: 40%;
-	background-repeat: no-repeat;
-    background-position: bottom left;
-	padding: 14% 10%;
-	height: 600px;
-    }
-}
 .intro h1 { /*ÑÑ‚Ð¸Ð»Ð¸ Ð´Ð»Ñ Ð¸Ð¼ÐµÐ½Ð¸ Ñ„Ð°Ð¼Ð¸Ð»Ð¸Ð¸*/
 	margin-bottom: -10px;
 	margin-top: 0px;
@@ -279,6 +293,12 @@ a.nav:hover {
 }
 
 .text {
+    position:absolute;
+    right:0;
+    margin-right: 5%;
+}
+
+.text4 {
     position:absolute;
     right:0;
     margin-right: 5%;

@@ -11,62 +11,6 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 </head>
 	<script src="jquery-3.3.1.min.js"></script>
-	<script>
-
-		$(function(){
-			$('a[href^="#"]').click(function(){
-				var target = $(this).attr('href');
-				$('html, body').animate({scrollTop: $(target).offset().top}, 800);
-					return false; 
-			}); 
-		});
-
-		$(function(){
-			$('#callback').click(function(){
-				$('#pop-up-container').css('display', 'flex');
-			});
-			$('#pop-up-container').click(function(e){
-				if(e.target === this) {
-					$('#pop-up-container').css('display', 'none');
-				}
-			});
-		});
-
-		$(function(){
-			$('#callback_2').click(function(){
-				$('#pop-up-container').css('display', 'flex');
-			});
-			$('#pop-up-container').click(function(e){
-				if(e.target === this) {
-					$('#pop-up-container').css('display', 'none');
-				}
-			});
-		});	
-
-
-		$(function(){
-			$('#zakaz').click(function(){
-				$('#pop-up-container').css('display', 'flex');
-			});
-			$('#pop-up-container').click(function(e){
-				if(e.target === this) {
-					$('#pop-up-container').css('display', 'none');
-				}
-			});
-		});
-
-		$(function(){
-			$('#footer_callback').click(function(){
-				$('#pop-up-container').css('display', 'flex');
-			});
-			$('#pop-up-container').click(function(e){
-				if(e.target === this) {
-					$('#pop-up-container').css('display', 'none');
-				}
-			});
-		});
-
-	</script>
 
 	<style>
 	.top {
@@ -108,19 +52,7 @@
 
 <body>
 
-	<div id="pop-up-container">
-		<div id="pop-up">
-			<h1>Форма заявки</h1>
-			<form action="send.php" method="POST">
-				<input id="login" type="text" name="name" autocomplete="off" placeholder="Имя" required autofocus>
-				<input type="text" name="telefon" placeholder="Телефон, без+" required pattern="[0-9]{11}"> <!-- 11 цифр-->
-				<input id="zakazat_proekt" type="submit" name="zakazat_proekt" required value="Заказать проект">
-				<br>
-				<input id="zakazat_proekt" type="checkbox" name="agreement" required value="Я согласен с условиями обработки персональных данных" >
-				<p id="agreement">Я согласен с условиями обработки персональных данных</p> 
-			</form>
-		</div>
-	</div>
+
 
 
     <div id="header">
@@ -148,6 +80,18 @@
 Дизайнерам с опытом, но готовых развиваться<br>
 
 Те кто трезво оценивают свои силы и понимают, что нужно повышать<br> планку профессионального уровня и зарабатывать больше</h3>
+		   </div>
+		</div>
+
+	</div>
+
+    <div id="header">
+
+
+		<div class="intro4"> <!--блок с информацией обо мне-->
+		   <div class="text4">
+			<h1>Совместная разработка</h1>
+			<h3>Хороший программист - это на 50% умение кодить и на 50% умение <br>взаимодействовать с коллегами. Здесь прокачают ваши "soft <br>skills", которые обязательно проверят на собеседовании в любую <br>серьезную компанию.</h3>
 		   </div>
 		</div>
 
