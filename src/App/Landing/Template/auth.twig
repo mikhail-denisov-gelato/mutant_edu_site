@@ -1,10 +1,11 @@
+  
 {% extends _layout %}
 
 {% block content %}
    <br><br><br><br>
     <h1>Please authorise</h1>
     {% if(success) %}
-    <h2>Вы вошли</h2>
+    <h2>You are authorised</h2>
     {% else %}
     <p>
     <form action="" method="post">
@@ -14,4 +15,5 @@
     </form>
     </p>
     {% endif %}
+
 {% endblock %}
