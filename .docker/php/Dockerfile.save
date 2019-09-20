@@ -60,6 +60,7 @@ RUN docker-php-ext-install -j6 \
     pdo_pgsql     \
     sockets
 
+RUN apt-get update && apt-get install -y
 
 RUN pecl install -o -f amqp             && \
         docker-php-ext-enable amqp      && \
@@ -123,11 +124,11 @@ RUN if [ -n "${PUID}" ] && [ "${PUID%:*}" != 0 ]; then \
 #####################################
 # pgsql client
 #####################################
-# RUN set -ex \
-# && apk --no-cache add \
-#   postgresql-dev
-#
-# RUN docker-php-ext-install pdo pdo_pgsql
+#RUN wget -q https://www.postgresql.org/media/keys/ACCC4CF8.asc -O - | apt-key add - && \
+#    sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ `lsb_release -cs`-pgdg main" >> /etc/apt/sources.list.d/pgdg.list' && \
+#    apt-get -qy update && apt-get -qy install --no-install-recommends \
+#        postgresql-client \
+#    && apt-get autoremove -qy && apt-get clean -qy && rm -rf /tmp/* /var/lib/apt/lists/*
 # END pgsql client --------------------------
 
 #

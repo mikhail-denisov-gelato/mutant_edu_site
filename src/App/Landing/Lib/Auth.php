@@ -1,29 +1,29 @@
 <?php
 namespace App\Landing\Lib;
 
-
 class Auth
 {
     private $authPairs = [
-        'duane' => '123',
-        'mike' => 'Mikeismike22'
+        'duane' => ['321','admin'],
+        'mike' =>  ['123','user']
     ];
     private $authKeys = [
-        'duane' => '123',
-        'mike' => 'nMCYUW>KVB)0!VAgcaiAFSHCJB'
+        'duane' => '321',
+        'mike' => '123'
     ];
     public function checkLoginAndPassAndReturnKey($login, $pass)
-    {
-        $storedPass = $this->authPairs[$login] ?? null;
+    {z
+        $storedPass = $this->authPairs[$login][0] ?? null;
         if (!$storedPass) {
-            return false;
+                return false;
         }
+        $storedPass = $this->authPairs[$login][0] ?? null;
         if ($storedPass !== $pass) {
-            return false;
+                return false;
         }
         $key = $this->authKeys[$login];
         if (!$key) {
-            return false;
+                return false;
         }
         return $key;
     }
@@ -31,11 +31,15 @@ class Auth
     {
         $storedPass = $this->authKeys[$login] ?? null;
         if (!$storedPass) {
-            return false;
+                return false;
         }
         if ($storedPass !== $key) {
-            return false;
+                return false;
         }
-        return true;
+        $level = 1;
+        $storedPass = $this->authPairs[$login][1] ?? null;
+        if ($storedPass == admin)
+            $level = 2;
+        return $level;
     }
 }
