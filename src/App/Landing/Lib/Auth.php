@@ -12,7 +12,7 @@ class Auth
         'mike' => '123'
     ];
     public function checkLoginAndPassAndReturnKey($login, $pass)
-    {z
+    {
         $storedPass = $this->authPairs[$login][0] ?? null;
         if (!$storedPass) {
                 return false;
