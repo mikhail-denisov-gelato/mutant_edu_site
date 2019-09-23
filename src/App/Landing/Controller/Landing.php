@@ -7,6 +7,7 @@ use App\Landing\Lib\Users;
 use Base\Render\RendererInterface;
 use Verse\Di\Env;
 use Verse\Run\Controller\SimpleController;
+use Verse\Run\lib\adapter;
 /*
 $host = 'database';
 $port = '5432';
@@ -89,6 +90,12 @@ class Landing extends SimpleController
     }
     public function user()
     {
+        db_connection::get_connection();
+        $column = $pdo->prepare("SELECT (password) FROM users_profile WHERE (login=?)");
+        $column->execute($login);
+        $result = $column->fetch(\PDO::FETCH_NAMED);
+        $password = $result['password'];
+        echo "$password";
         return $this->_render('user', [
         ]);
     }
