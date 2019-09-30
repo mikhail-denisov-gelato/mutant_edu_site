@@ -1,0 +1,25 @@
+  
+{% extends _layout %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width,initial-scale=0.5,minimum-scale=0.5,maximum-scale=1.5">
+    <link rel="stylesheet" type="text/css" href="../css/registration.css">
+</head>
+<body>
+    <div id="header">
+        <div id="registration"><h1 id="registration">Регистрация</h1></div>
+        <form action="" method="post">
+            <div id="pogo-column"><input id="column" type="text" name="login" placeholder="логин" value="{{ login }}"><br></div>
+            <div id="pogo-column"><input id ="column" type="password" name="password" placeholder="пароль"><br></div>
+            <div id="pogo-button"><input id="button" type="submit" value="Зарегистрироваться"></div>
+        </form>
+    <h2 id="comment">{{ comment }}</h2id>
+    </div>
+</body>
+</html>
+{% endblock %}

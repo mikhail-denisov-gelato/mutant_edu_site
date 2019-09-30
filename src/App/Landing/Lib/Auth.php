@@ -1,45 +1,45 @@
 <?php
 namespace App\Landing\Lib;
 
+use Verse\Run\lib\adapter;
+
 class Auth
 {
-    private $authPairs = [
-        'duane' => ['321','admin'],
-        'mike' =>  ['123','user']
-    ];
-    private $authKeys = [
-        'duane' => '321',
-        'mike' => '123'
-    ];
     public function checkLoginAndPassAndReturnKey($login, $pass)
     {
-        $storedPass = $this->authPairs[$login][0] ?? null;
-        if (!$storedPass) {
-                return false;
+        new adapter();
+        $comment ='Введите логин или пароль';
+        $user = [$login];
+        $pdo = adapter::get_connection();
+        $column = $pdo->prepare("SELECT (password) FROM users_profile WHERE (login=?)");
+        $column->execute($user);
+        $result = $column->fetch(\PDO::FETCH_NAMED);
+        $password = $result['password'];
+
+        if (count($password) == 0) {
+            return $comment;
         }
-        $storedPass = $this->authPairs[$login][0] ?? null;
-        if ($storedPass !== $pass) {
-                return false;
+        else {
+            if ($pass == $password) {
+                return true;
+            }
+
+        else {
+            $comment = 'Неверный логин или пароль';
+             }
         }
-        $key = $this->authKeys[$login];
-        if (!$key) {
-                return false;
-        }
-        return $key;
+        return $comment;
     }
-    public function checkAuthKey($login, $key)
+    public function checkRole($login)
     {
-        $storedPass = $this->authKeys[$login] ?? null;
-        if (!$storedPass) {
-                return false;
-        }
-        if ($storedPass !== $key) {
-                return false;
-        }
-        $level = 1;
-        $storedPass = $this->authPairs[$login][1] ?? null;
-        if ($storedPass == admin)
-            $level = 2;
-        return $level;
+        new adapter();
+        $user = [$login];
+        $pdo = adapter::get_connection();
+        $column = $pdo->prepare("SELECT (role) FROM users_profile WHERE (login=?)");
+        $column->execute($user);
+        $result = $column->fetch(\PDO::FETCH_NAMED);
+        $role = $result['role'];
+        
+        return $role;
     }
 }

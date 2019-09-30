@@ -4,10 +4,21 @@ namespace App\Landing\Controller;
 
 use App\Landing\Lib\Auth;
 use App\Landing\Lib\Users;
+use App\Landing\Lib\Registration;
 use Base\Render\RendererInterface;
 use Verse\Di\Env;
 use Verse\Run\Controller\SimpleController;
 use Verse\Run\lib\adapter;
+
+
+new adapter();
+$pdo = adapter::get_connection();
+$query = ("CREATE TABLE users_profile(login varchar(16) PRIMARY KEY, password varchar(16), role varchar(16));
+");
+$create =$pdo->exec($query);
+if($create){
+    echo "Create table";
+}
 /*
 $host = 'database';
 $port = '5432';
@@ -75,28 +86,46 @@ class Landing extends SimpleController
         $pass = $this->p('pass');
         
         $auth = new Auth();
-        $level = false;
 
-        if ($key = $auth->checkLoginAndPassAndReturnKey($login, $pass)) {
-            $this->requestWrapper->setState('key', $key);
-            $this->requestWrapper->setState('user_id', $login);
-            $this->requestWrapper->setState('level', $level);
-
+        if($comment = $auth->checkLoginAndPassAndReturnKey($login, $pass)){
+            $role = $auth->checkRole($login);
         }
+        else{
+            $comment = 'Неверный логин или пароль';
+        };
+
         return $this->_render('auth', [
-            'level' => $auth->checkAuthKey($login, $key),
+            'role' => $role,
             'login' => $login,
+            'comment' => $comment,
+        ]);
+    }
+    public function registration()
+    {
+        new adapter();
+        $login = $this->p('login');
+        $password = $this->p('password');
+        $role ='user';
+        $registration = new Registration();
+        $comment = $registration->NewUserRegistration($login,$password,$role);
+        print_r($comment);
+        return $this->_render('registration', [
+            'comment' => $comment,
         ]);
     }
     public function user()
     {
-        db_connection::get_connection();
+        
+        $login = ['Savva'];
+        new adapter();
+        $pdo = adapter::get_connection();
         $column = $pdo->prepare("SELECT (password) FROM users_profile WHERE (login=?)");
         $column->execute($login);
         $result = $column->fetch(\PDO::FETCH_NAMED);
-        $password = $result['password'];
-        echo "$password";
+        $pass = $result['password'];
+        print_r($pass);
         return $this->_render('user', [
+            'login' => $pass,
         ]);
     }
 
